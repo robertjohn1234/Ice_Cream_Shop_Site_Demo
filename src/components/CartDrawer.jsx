@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '../lib/cart.jsx';
-import { shop } from '../shop';
+import { shop, offers } from '../shop';
 import { peso, todayISO, buildOrderMessage, copyNow, copyAsync } from '../lib/order';
 import Scoop from './Scoop.jsx';
 import OrderSentModal from './OrderSentModal.jsx';
@@ -152,6 +152,11 @@ export default function CartDrawer({ open, onClose }) {
               <span>Subtotal</span>
               <strong>{peso(subtotal)}</strong>
             </div>
+            {offers.enabled && (
+              <p className="bulk-note">
+                🎉 Big order for an event? Ask us about our <strong>bulk discount</strong> in Messenger.
+              </p>
+            )}
 
             <form className="order-form" onSubmit={(e) => e.preventDefault()} noValidate>
               <h3>Your details</h3>

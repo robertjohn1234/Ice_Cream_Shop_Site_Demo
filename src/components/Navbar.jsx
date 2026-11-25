@@ -1,10 +1,11 @@
 import { useCart } from '../lib/cart.jsx';
-import { shop } from '../shop';
+import { shop, offers } from '../shop';
 import Scoop from './Scoop.jsx';
 
 const links = [
   { label: 'Menu', href: '#menu' },
   { label: 'How to order', href: '#how' },
+  ...(offers.enabled ? [{ label: 'Bulk & resell', href: '#partner' }] : []),
   { label: 'Visit us', href: '#visit' },
 ];
 

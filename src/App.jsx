@@ -6,6 +6,7 @@ import Hero from './components/Hero.jsx';
 import FlavorRibbon from './components/FlavorRibbon.jsx';
 import Menu from './components/Menu.jsx';
 import HowToOrder from './components/HowToOrder.jsx';
+import Partner from './components/Partner.jsx';
 import Visit from './components/Visit.jsx';
 import Footer from './components/Footer.jsx';
 import CartDrawer from './components/CartDrawer.jsx';
@@ -31,6 +32,7 @@ export default function App() {
         <FlavorRibbon />
         <Menu onAdded={notify} />
         <HowToOrder />
+        <Partner onNotify={notify} />
         <Visit />
       </main>
       <Footer />

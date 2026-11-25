@@ -24,6 +24,39 @@ export const shop = {
   currency: '₱',
 };
 
+// ------------------------------------------------------------
+//  OFFERS — bulk discount + consignment ("pay only for sold items").
+//  Set enabled: false to hide the whole section (e.g. for the cake shop).
+//  The tiers below are SAMPLE numbers — change them to the shop's real deal.
+// ------------------------------------------------------------
+export const offers = {
+  enabled: true,
+  bulk: {
+    title: 'Bulk order discounts',
+    text: 'Ordering for a party, event, school or office? Enjoy special prices when you order in bulk.',
+    tiers: [
+      { min: '5 – 9 liters', deal: '5% off' },
+      { min: '10 – 19 liters', deal: '10% off' },
+      { min: '20 liters & up', deal: "Let's talk!" },
+    ],
+    cta: 'Ask for a bulk quote',
+    // Copied for the customer so they can paste it into Messenger
+    message: "Hi! I'd like to ask about a bulk order.\nEvent date: \nEstimated liters / flavors: ",
+  },
+  consignment: {
+    title: 'Sell our ice cream in your store',
+    text: "Own a sari-sari store, café, canteen or small shop? Partner with us — we supply the ice cream, and you only pay for what's sold.",
+    points: [
+      'No upfront payment — only sold items are counted',
+      'We restock and count the remaining stock regularly',
+      'Earn from every sale, with no risk on unsold products',
+    ],
+    requirement: 'All you need is a freezer to keep the products frozen.',
+    cta: 'Partner with us',
+    message: "Hi! I'm interested in selling your ice cream in my store (consignment).\nStore name: \nLocation: ",
+  },
+};
+
 export const categories = ['All', 'Classics', 'Pinoy Favorites', 'Specials'];
 
 // Helper for the usual three sizes
