@@ -1,6 +1,7 @@
 import { useCart } from '../lib/cart.jsx';
 import { shop, offers } from '../shop';
 import Scoop from './Scoop.jsx';
+import CartIcon from './CartIcon.jsx';
 
 const links = [
   { label: 'Menu', href: '#menu' },
@@ -29,7 +30,7 @@ export default function Navbar({ onCartClick }) {
         </nav>
 
         <button className="nav__cart" onClick={onCartClick} aria-label={`Open order, ${count} items`}>
-          <span aria-hidden="true">🛒</span>
+          <CartIcon />
           <span className="nav__cart-text">My order</span>
           {count > 0 && (
             <span className="badge" key={count}>
